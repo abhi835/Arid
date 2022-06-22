@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "504921571593",
+    "project_id": "poller-64670",
+    "storage_bucket": "poller-64670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504921571593:android:018d333a0eeb3f126993d8",
+        "android_client_info": {
+          "package_name": "com.example.arid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504921571593-8jnptnb1dares5rp8l5c337kms8v5nrn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arid",
+            "certificate_hash": "bda7f9000700a6f13634df8eb5872fe9ce2a3adf"
+          }
+        },
+        {
+          "client_id": "504921571593-o6li9mu24h4l2e5e1o9groob244q07pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCuM0tM6mB750-9QCfwr7JUgiQM6TWub8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504921571593-o6li9mu24h4l2e5e1o9groob244q07pn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
