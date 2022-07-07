@@ -64,18 +64,18 @@ android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/option2" />
 
-    <EditText
-        android:id="@+id/option4"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_34mdp"
-        android:layout_marginTop="@dimen/_20mdp"
-        android:hint="Option3"
-        android:textAlignment="center"
-        android:textSize="@dimen/_15mdp"
-        android:background="@drawable/edittext_round_shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option3" />
+<!--    <EditText-->
+<!--        android:id="@+id/option4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_34mdp"-->
+<!--        android:layout_marginTop="@dimen/_20mdp"-->
+<!--        android:hint="Option3"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="@dimen/_15mdp"-->
+<!--        android:background="@drawable/edittext_round_shape"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/option3" />-->
 
 
 
@@ -90,6 +90,6 @@ android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/option4" />
+        app:layout_constraintTop_toBottomOf="@+id/option3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,14 +27,15 @@ class AddPostFragment : Fragment() {
             val option1 = binding.option1.text.toString().trim()
             val option2 = binding.option2.text.toString().trim()
             val option3 = binding.option3.text.toString().trim()
-            val option4 = binding.option4.text.toString().trim()
-            if(question.isNotEmpty()&&option1.isNotEmpty()&&option2.isNotEmpty()&&option3.isNotEmpty()&&option4.isNotEmpty()){
-                postDao.addPost(question, option1, option2, option3,option4)
+//            val option4 = binding.option4.text.toString().trim()
+            if(question.isNotEmpty()&&option1.isNotEmpty()&&option2.isNotEmpty()&&option3.isNotEmpty()){
+                postDao.addPost(question, option1, option2, option3)
                 binding.question.text.clear()
                 binding.option1.text.clear()
                 binding.option2.text.clear()
                 binding.option3.text.clear()
-                                binding.option4.text.clear()
+
+//                                binding.option4.text.clear()
                 Toast.makeText(activity,"Post Created!",Toast.LENGTH_SHORT).show()
             }
 

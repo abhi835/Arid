@@ -16,18 +16,20 @@ class PostDao {
     val postCollection = db.collection("posts")
     val auth = Firebase.auth
 
-    fun addPost(question:String,option1:String,option2:String,option3:String,option4:String){
+    fun addPost(question:String,option1:String,option2:String,option3:String){
         GlobalScope.launch {
 
             val currentUserId = auth.currentUser!!.uid
             val userDao = UserDao()
             val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
             val currentTime = System.currentTimeMillis()
-            val post = Post(question,option1,option2,option3,option4,user,currentTime)
+            val post = Post(question,option1,option2,option3,user,currentTime)
+
 
 
 //            val postt = Post()
             postCollection.document().set(post)
+
         }
     }
 
@@ -94,20 +96,20 @@ class PostDao {
             postCollection.document(postId).set(post)
         }
     }
-    fun updateFourOption(postId:String){
-        GlobalScope.launch {
-            val currentUserId  = auth.currentUser!!.uid
-            val post = getPostById(postId).await().toObject(Post::class.java)!!
-            val isPolled = post.polledBy.contains(currentUserId)
-
-            if(isPolled){
-//                post.polledBy.remove(currentUserId)
-
-            }else{
-                post.polledBy.add(currentUserId)
-                post.optionFour.add(currentUserId)
-            }
-            postCollection.document(postId).set(post)
-        }
-    }
+//    fun updateFourOption(postId:String){
+//        GlobalScope.launch {
+//            val currentUserId  = auth.currentUser!!.uid
+//            val post = getPostById(postId).await().toObject(Post::class.java)!!
+//            val isPolled = post.polledBy.contains(currentUserId)
+//
+//            if(isPolled){
+////                post.polledBy.remove(currentUserId)
+//
+//            }else{
+//                post.polledBy.add(currentUserId)
+//                post.optionFour.add(currentUserId)
+//            }
+//            postCollection.document(postId).set(post)
+//        }
+//    }
 }

@@ -3,8 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:elevation="@dimen/_12mdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="16dp">
+
+    android:layout_marginTop="@dimen/_6mdp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,6 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toEndOf="@+id/userImage"
             app:layout_constraintTop_toTopOf="@+id/userImage"
             android:layout_marginStart="12dp"
@@ -28,6 +31,7 @@
             android:textSize="16sp"
             android:textColor="#212121"
             android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/createdAt"
@@ -38,12 +42,10 @@
             app:layout_constraintTop_toBottomOf="@+id/userName"
             android:layout_marginTop="4dp"
             android:layout_marginStart="12dp"
-
             />
 
 
-        <TextView
-
+            <TextView
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userImage"
@@ -51,22 +53,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="How many days are in a leap year"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:text="How many days are in a leap year?"
             android:textColor="@color/black"
-            android:textSize="@dimen/_26mdp"
+            android:textSize="@dimen/_20mdp"
             app:flow_horizontalAlign="center"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <SeekBar
+            <SeekBar
             android:id="@+id/seekbar1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10mdp"
             android:max="100"
             android:progress="0"
-            android:thumb="@color/demo_light_transparent"
             android:progressDrawable="@drawable/progress_track"
+            android:thumb="@color/demo_light_transparent"
             app:layout_constraintEnd_toStartOf="@+id/percent1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/postTitle" />
@@ -74,26 +76,32 @@
         <TextView
             android:id="@+id/option1"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45mdp"
-            android:textAlignment="center"
+            android:layout_height="@dimen/_40mdp"
             android:text="Java"
+           android:layout_marginStart="@dimen/_26mdp"
+            android:layout_marginTop="@dimen/_12mdp"
             android:textColor="#2D3C49"
-            android:textSize="@dimen/_15mdp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/seekbar1"
-            app:layout_constraintStart_toStartOf="@+id/seekbar1"
+            android:textSize="@dimen/_16mdp"
+
+            app:layout_constraintEnd_toEndOf="@id/seekbar1"
+            app:layout_constraintStart_toStartOf="@id/seekbar1"
             app:layout_constraintTop_toTopOf="@id/seekbar1" />
 
         <TextView
             android:id="@+id/percent1"
             android:visibility="gone"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_45mdp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_30mdp"
+            android:layout_marginBottom="@dimen/_18mdp"
             android:gravity="center_vertical"
             android:text="0%"
+            android:textStyle="bold|italic"
+            android:textColor="#808080"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/option1"/>
+            app:layout_constraintTop_toTopOf="@+id/option1"
+            app:layout_constraintBottom_toBottomOf="@id/option1"/>
+
 
         <SeekBar
             android:id="@+id/seekbar2"
@@ -111,13 +119,13 @@
         <TextView
             android:id="@+id/option2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45mdp"
-            android:textAlignment="center"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_marginStart="@dimen/_26mdp"
             android:text="Java"
-            android:textColor="#2D3C49"
-            android:textSize="@dimen/_15mdp"
-            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10mdp"
 
+            android:textColor="#2D3C49"
+            android:textSize="@dimen/_16mdp"
             app:layout_constraintEnd_toEndOf="@+id/seekbar2"
             app:layout_constraintStart_toStartOf="@+id/seekbar2"
             app:layout_constraintTop_toTopOf="@id/seekbar2" />
@@ -126,12 +134,17 @@
             android:id="@+id/percent2"
             android:visibility="gone"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_45mdp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_30mdp"
             android:gravity="center_vertical"
             android:text="0%"
+            android:textStyle="bold|italic"
+            android:textColor="#808080"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/option1" />
+            app:layout_constraintTop_toTopOf="@+id/option2"
+            app:layout_constraintBottom_toBottomOf="@id/option2"
+            android:layout_marginBottom="@dimen/_18mdp"
+            />
 
         <SeekBar
             android:id="@+id/seekbar3"
@@ -149,69 +162,73 @@
         <TextView
             android:id="@+id/option3"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45mdp"
+            android:layout_height="@dimen/_40mdp"
             android:text="Java"
-            android:textAlignment="center"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginStart="@dimen/_26mdp"
             android:textColor="#2D3C49"
-            android:textSize="@dimen/_15mdp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:textSize="@dimen/_16mdp"
             app:layout_constraintEnd_toEndOf="@+id/seekbar3"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/seekbar3"
-            app:layout_constraintTop_toTopOf="@id/seekbar3"
-            app:layout_constraintVertical_bias="0.02" />
+            app:layout_constraintTop_toTopOf="@id/seekbar3"/>
 
         <TextView
             android:id="@+id/percent3"
-android:visibility="gone"
+            android:visibility="gone"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_45mdp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_30mdp"
             android:gravity="center_vertical"
+            android:textColor="#808080"
             android:text="0%"
+            android:textStyle="bold|italic"
+            android:layout_marginBottom="@dimen/_18mdp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/option2" />
+            app:layout_constraintTop_toTopOf="@+id/option3"
+            app:layout_constraintBottom_toBottomOf="@id/option3"/>
 
-        <SeekBar
-            android:id="@+id/seekbar4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10mdp"
-            android:max="100"
-            android:progress="0"
-            android:progressDrawable="@drawable/progress_track"
-            android:thumb="@color/demo_light_transparent"
-            app:layout_constraintEnd_toStartOf="@+id/percent3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/seekbar3"/>
+<!--        <SeekBar-->
+<!--            android:id="@+id/seekbar4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10mdp"-->
+<!--            android:max="100"-->
+<!--            android:progress="0"-->
+<!--            android:progressDrawable="@drawable/progress_track"-->
+<!--            android:thumb="@color/demo_light_transparent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/percent3"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/seekbar3"/>-->
 
-        <TextView
-            android:id="@+id/option4"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45mdp"
-            android:text="Java"
-            android:textAlignment="center"
-            android:textColor="#2D3C49"
-            android:textSize="@dimen/_15mdp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/seekbar4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/seekbar4"
-            app:layout_constraintTop_toTopOf="@id/seekbar4"
-            app:layout_constraintVertical_bias="0.02" />
+<!--        <TextView-->
+<!--            android:id="@+id/option4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_40mdp"-->
+<!--            android:text="Java"-->
+<!--            android:layout_marginStart="@dimen/_26mdp"-->
+<!--            android:textColor="#2D3C49"-->
+<!--            android:paddingTop="@dimen/_10mdp"-->
+<!--            android:textSize="@dimen/_16mdp"-->
+<!--            android:layout_marginTop="@dimen/_10mdp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/seekbar4"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/seekbar4"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/seekbar4"-->
+<!--            app:layout_constraintTop_toTopOf="@id/seekbar4"-->
+<!--             />-->
 
-            <TextView
-                android:id="@+id/percent4"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_45mdp"
-                android:layout_marginEnd="@dimen/_30mdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="0%"
-                android:gravity="center_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/option3"/>
+<!--            <TextView-->
+<!--                android:id="@+id/percent4"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="@dimen/_30mdp"-->
+<!--                android:textColor="#808080"-->
+<!--                android:textStyle="bold|italic"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:text="0%"-->
+<!--                android:gravity="center_vertical"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/option4"-->
+<!--                android:layout_marginBottom="@dimen/_5mdp"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

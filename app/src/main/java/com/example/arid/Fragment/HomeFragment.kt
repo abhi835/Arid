@@ -121,7 +121,7 @@ private fun setUpRecyclerView(){
     override fun onLikeThreeClicked(postId: String) {
         postDao.updateThreeOption(postId)
     }
-    override fun onLikeFourClicked(postId: String){
-        postDao.updateFourOption(postId)
-    }
+//    override fun onLikeFourClicked(postId: String){
+//        postDao.updateFourOption(postId)
+//    }
 }
